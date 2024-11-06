@@ -18,8 +18,8 @@ function getComputerChoice() {
     return cpuChoice;
 }
 
-function getHumanChoice(humanChoice) {
-    humanChoice = prompt("Rock, Paper, or Scissors?"); humanChoice = humanChoice.toUpperCase();
+function getHumanChoice() {
+    let humanChoice = prompt("Rock, Paper, or Scissors?"); humanChoice = humanChoice.toUpperCase();
 
     if (humanChoice === "ROCK" || humanChoice === "PAPER" || humanChoice === "SCISSORS") {
         return humanChoice;
@@ -31,8 +31,25 @@ function getHumanChoice(humanChoice) {
     
 }
 
-console.log(getHumanChoice());
-
 function playRound(humanChoice, cpuChoice) {
-
+    let message = console.log(`Your choice: ${humanChoice} | CPU choice: ${cpuChoice}`);
+    
+    if (humanChoice === cpuChoice) {
+        message;
+        console.log("It is a tie")
+    }
+    else if (humanChoice === "ROCK" && cpuChoice === "PAPER" || 
+    humanChoice === "PAPER" && cpuChoice === "SCISSORS" || 
+    humanChoice === "SCISSORS" && cpuChoice === "ROCK") {
+        message;
+        console.log(`You lose! ${cpuChoice} defeats ${humanChoice}`);
+        cpuScore += 1;
+    }
+    else if (humanChoice === "ROCK" && cpuChoice === "SCISSORS" || 
+    humanChoice === "PAPER" && cpuChoice === "ROCK" || 
+    humanChoice === "SCISSORS" && cpuChoice === "PAPER") {
+        message;
+        console.log(`You Win! ${humanChoice} defeats ${cpuChoice}`);
+        humanScore += 1;
+    }
 }
