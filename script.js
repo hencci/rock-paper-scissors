@@ -19,13 +19,14 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt("Rock, Paper, or Scissors?"); humanChoice = humanChoice.toUpperCase();
+    let humanChoice = prompt("Rock, Paper, or Scissors?");
+    humanChoice = humanChoice.toUpperCase();
 
     if (humanChoice === "ROCK" || humanChoice === "PAPER" || humanChoice === "SCISSORS") {
         return humanChoice;
     }
     else {
-        alert("Invalid input");
+        alert("Invalid input. Try again");
         getHumanChoice();
     }
     
@@ -53,3 +54,8 @@ function playRound(humanChoice, cpuChoice) {
         humanScore += 1;
     }
 }
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
