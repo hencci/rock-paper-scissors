@@ -18,11 +18,21 @@ function getComputerChoice() {
     return cpuChoice;
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("Rock, Paper, or Scissors?");
-    return humanChoice;
+function getHumanChoice(humanChoice) {
+    humanChoice = prompt("Rock, Paper, or Scissors?"); humanChoice = humanChoice.toUpperCase();
+
+    if (humanChoice === "ROCK" || humanChoice === "PAPER" || humanChoice === "SCISSORS") {
+        return humanChoice;
+    }
+    else {
+        alert("Invalid input");
+        getHumanChoice();
+    }
+    
 }
 
+console.log(getHumanChoice());
+
 function playRound(humanChoice, cpuChoice) {
-    
+
 }
