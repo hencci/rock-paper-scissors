@@ -14,4 +14,7 @@ function getComputerChoice() {
 
     return cpuChoice;
 }
-console.log(getComputerChoice());
+
+function getHumanChoice() {
+
+}
