@@ -26,7 +26,6 @@ function getHumanChoice() {
         alert("Invalid input. Try again");
         getHumanChoice();
     }
-    
 }
 
 function playGame() {
