@@ -64,7 +64,7 @@ function playGame() {
     
     console.log(`Human Score: ${humanScore} | Computer Score: ${cpuScore}`);
     if (humanScore > cpuScore) {
-        console.log("You win the game! You're smarter then the computer")
+        console.log("You win the game! You're smarter than the computer")
     } else if (humanScore < cpuScore) {
         console.log("You lost! Better chance next time!")
     } else {
