@@ -23,7 +23,7 @@ function getHumanChoice() {
         return humanChoice;
     }
     else {
-        alert("Invalid input. Try again");
+        alert("Invalid input. Try again with the 3 valid options provided");
         getHumanChoice();
     }
 }
