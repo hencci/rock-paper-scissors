@@ -19,12 +19,13 @@ function getHumanChoice() {
     let humanChoice = prompt("Rock, Paper, or Scissors?");
     humanChoice = humanChoice.toUpperCase();
 
-    if (humanChoice === "ROCK" || humanChoice === "PAPER" || humanChoice === "SCISSORS") {
+    if(humanChoice === "ROCK" || humanChoice === "PAPER" || humanChoice === "SCISSORS"){
         return humanChoice;
     }
     else {
-        alert("Invalid input. Try again with the 3 valid options provided");
-        getHumanChoice();
+        humanChoice = "ROCK";
+        alert("You no try. You don choose rock be that")
+        return humanChoice;
     }
 }
 
@@ -55,9 +56,9 @@ function playGame() {
         }
     }
     for (i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
+        let humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
-
+    
         playRound(humanSelection, computerSelection);
     }
     
