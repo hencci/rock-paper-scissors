@@ -1,6 +1,7 @@
-const rock = document.querySelector("#rock");
-const paper = document.querySelector("#paper");
-const scissors = document.querySelector("#scissors");
+// const rock = document.querySelector("#rock");
+// const paper = document.querySelector("#paper");
+// const scissors = document.querySelector("#scissors");
+const buttons = document.querySelectorAll("button");
 const playerScore = document.querySelector(".playerScore");
 const cpuScore = document.querySelector(".cpuScore");
 const displayMessage = document.querySelector("#displayMessage");
@@ -13,21 +14,29 @@ let computerScore = 0;
 playerScore.textContent = humanScore;
 cpuScore.textContent = computerScore;
 
-rock.addEventListener("click", (e) => {
-    computerSelection = getComputerChoice();
-    humanSelection = e.target.getAttribute("id");
-    playGame();
-})
-paper.addEventListener("click", (e) => {
-    computerSelection = getComputerChoice();
-    humanSelection = e.target.getAttribute("id");
-    playGame();
-})
-scissors.addEventListener("click", (e) => {
-    computerSelection = getComputerChoice();
-    humanSelection = e.target.getAttribute("id");
-    playGame();
-})
+buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        computerSelection = getComputerChoice();
+        humanSelection = e.target.getAttribute("id");
+        playGame();
+    });
+});
+
+// rock.addEventListener("click", (e) => {
+//     computerSelection = getComputerChoice();
+//     humanSelection = e.target.getAttribute("id");
+//     playGame();
+// })
+// paper.addEventListener("click", (e) => {
+//     computerSelection = getComputerChoice();
+//     humanSelection = e.target.getAttribute("id");
+//     playGame();
+// })
+// scissors.addEventListener("click", (e) => {
+//     computerSelection = getComputerChoice();
+//     humanSelection = e.target.getAttribute("id");
+//     playGame();
+// })
 
 function getComputerChoice() {
 
