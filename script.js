@@ -22,20 +22,6 @@ function getComputerChoice() {
     return cpuChoice;
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("Rock, Paper, or Scissors?");
-    humanChoice = humanChoice.toUpperCase();
-
-    if(humanChoice === "ROCK" || humanChoice === "PAPER" || humanChoice === "SCISSORS"){
-        return humanChoice;
-    }
-    else {
-        humanChoice = "ROCK";
-        alert("You no try. You don choose rock be that")
-        return humanChoice;
-    }
-}
-
 function playGame() {
     let humanScore = 0;
     let cpuScore = 0;
@@ -62,10 +48,9 @@ function playGame() {
             humanScore += 1;
         }
     }
-        let humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+    const computerSelection = getComputerChoice();
     
-        playRound(humanSelection, computerSelection);
+    playRound(humanSelection, computerSelection);
     
     console.log(`Human Score: ${humanScore} | Computer Score: ${cpuScore}`);
     if (humanScore > cpuScore) {
