@@ -72,12 +72,16 @@ function playGame() {
     
     playRound(humanSelection, computerSelection);
     
-    console.log(`Human Score: ${humanScore} | Computer Score: ${cpuScore}`);
-    if (humanScore > cpuScore) {
-        console.log("You win the game! You're smarter than the computer")
-    } else if (humanScore < cpuScore) {
-        console.log("You lost! Better chance next time!")
-    } else {
-        console.log("The game ends in a TIE!")
+    if (humanScore === 5) {
+        displayMessage.textContent = "You win the game! You're smarter than the computer";
+        humanScore = 0;
+        computerScore = 0;
+        updateScore();
+    }
+    else if (computerScore === 5) {
+        displayMessage.textContent = "You lost! Better chance next time!";
+        humanScore = 0;
+        computerScore = 0;
+        updateScore();
     }
 }
