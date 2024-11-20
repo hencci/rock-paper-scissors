@@ -45,25 +45,20 @@ function getComputerChoice() {
 }
 
 function playGame() {
-    function playRound(humanChoice, cpuChoice) {
-        let message = console.log(`Your choice: ${humanChoice} | CPU choice: ${cpuChoice}`);
-        
+    function playRound(humanChoice, cpuChoice) {        
         if (humanChoice === cpuChoice) {
-            message;
-            console.log("It is a tie")
+            displayMessage.textContent = "It is a tie";
         }
-        else if (humanChoice === "ROCK" && cpuChoice === "PAPER" || 
-        humanChoice === "PAPER" && cpuChoice === "SCISSORS" || 
-        humanChoice === "SCISSORS" && cpuChoice === "ROCK") {
-            message;
-            console.log(`You lose! ${cpuChoice} defeats ${humanChoice}`);
-            cpuScore += 1;
+        else if (humanChoice === "rock" && cpuChoice === "paper" || 
+        humanChoice === "paper" && cpuChoice === "scissors" || 
+        humanChoice === "scissors" && cpuChoice === "rock") {
+            displayMessage.textContent = `You lose! ${cpuChoice} defeats ${humanChoice}`;
+            computerScore += 1;
         }
-        else if (humanChoice === "ROCK" && cpuChoice === "SCISSORS" || 
-        humanChoice === "PAPER" && cpuChoice === "ROCK" || 
-        humanChoice === "SCISSORS" && cpuChoice === "PAPER") {
-            message;
-            console.log(`You Win! ${humanChoice} defeats ${cpuChoice}`);
+        else if (humanChoice === "rock" && cpuChoice === "scissors" || 
+        humanChoice === "paper" && cpuChoice === "rock" || 
+        humanChoice === "scissors" && cpuChoice === "paper") {
+            displayMessage.textContent = `You Win! ${humanChoice} defeats ${cpuChoice}`;
             humanScore += 1;
         }
     }
