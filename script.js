@@ -7,6 +7,11 @@ const displayMessage = document.querySelector("#displayMessage");
 
 let computerSelection;
 let humanSelection;
+let humanScore = 0;
+let computerScore = 0;
+
+playerScore.textContent = humanScore;
+cpuScore.textContent = computerScore;
 
 rock.addEventListener("click", (e) => {
     computerSelection = getComputerChoice();
@@ -40,9 +45,6 @@ function getComputerChoice() {
 }
 
 function playGame() {
-    let humanScore = 0;
-    let cpuScore = 0;
-
     function playRound(humanChoice, cpuChoice) {
         let message = console.log(`Your choice: ${humanChoice} | CPU choice: ${cpuChoice}`);
         
