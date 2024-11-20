@@ -55,12 +55,10 @@ function playGame() {
             humanScore += 1;
         }
     }
-    for (i = 0; i < 5; i++) {
         let humanSelection = getHumanChoice();
         const computerSelection = getComputerChoice();
     
         playRound(humanSelection, computerSelection);
-    }
     
     console.log(`Human Score: ${humanScore} | Computer Score: ${cpuScore}`);
     if (humanScore > cpuScore) {
