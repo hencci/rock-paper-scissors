@@ -44,6 +44,11 @@ function getComputerChoice() {
     }
 }
 
+function updateScore() {
+    playerScore.textContent = humanScore;
+    cpuScore.textContent = computerScore;
+}
+
 function playGame() {
     function playRound(humanChoice, cpuChoice) {        
         if (humanChoice === cpuChoice) {
