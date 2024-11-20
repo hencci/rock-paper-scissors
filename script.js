@@ -1,3 +1,10 @@
+const rock = document.querySelector("#rock");
+const paper = document.querySelector("#paper");
+const scissors = document.querySelector("#scissors");
+const playerScore = document.querySelector(".playerScore");
+const cpuScore = document.querySelector(".cpuScore");
+const displayMessage = document.querySelector("#displayMessage");
+
 function getComputerChoice() {
     let cpuChoice;
     let choice = Math.floor(Math.random() * 3) + 1;
