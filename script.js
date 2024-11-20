@@ -59,12 +59,14 @@ function playGame() {
         humanChoice === "scissors" && cpuChoice === "rock") {
             displayMessage.textContent = `You lose! ${cpuChoice} defeats ${humanChoice}`;
             computerScore += 1;
+            updateScore();
         }
         else if (humanChoice === "rock" && cpuChoice === "scissors" || 
         humanChoice === "paper" && cpuChoice === "rock" || 
         humanChoice === "scissors" && cpuChoice === "paper") {
             displayMessage.textContent = `You Win! ${humanChoice} defeats ${cpuChoice}`;
             humanScore += 1;
+            updateScore();
         }
     }
     
