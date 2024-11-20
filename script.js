@@ -5,6 +5,25 @@ const playerScore = document.querySelector(".playerScore");
 const cpuScore = document.querySelector(".cpuScore");
 const displayMessage = document.querySelector("#displayMessage");
 
+let computerSelection;
+let humanSelection;
+
+rock.addEventListener("click", (e) => {
+    computerSelection = getComputerChoice();
+    humanSelection = e.target.getAttribute("id");
+    playGame();
+})
+paper.addEventListener("click", (e) => {
+    computerSelection = getComputerChoice();
+    humanSelection = e.target.getAttribute("id");
+    playGame();
+})
+scissors.addEventListener("click", (e) => {
+    computerSelection = getComputerChoice();
+    humanSelection = e.target.getAttribute("id");
+    playGame();
+})
+
 function getComputerChoice() {
     let cpuChoice;
     let choice = Math.floor(Math.random() * 3) + 1;
@@ -48,7 +67,6 @@ function playGame() {
             humanScore += 1;
         }
     }
-    const computerSelection = getComputerChoice();
     
     playRound(humanSelection, computerSelection);
     
@@ -61,5 +79,3 @@ function playGame() {
         console.log("The game ends in a TIE!")
     }
 }
-
-playGame();
