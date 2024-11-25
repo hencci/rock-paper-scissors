@@ -23,6 +23,8 @@ buttons.forEach((button) => {
     });
 });
 
+restartButton.addEventListener("click", restartGame);
+
 // rock.addEventListener("click", (e) => {
 //     computerSelection = getComputerChoice();
 //     humanSelection = e.target.getAttribute("id");
