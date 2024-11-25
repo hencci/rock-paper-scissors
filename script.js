@@ -5,6 +5,7 @@ const buttons = document.querySelectorAll("button");
 const playerScore = document.querySelector(".playerScore");
 const cpuScore = document.querySelector(".cpuScore");
 const displayMessage = document.querySelector("#displayMessage");
+const restartButton = document.querySelector(".restartBtn");
 
 let computerSelection;
 let humanSelection;
@@ -83,14 +84,14 @@ function playGame() {
     
     if (humanScore === 5) {
         displayMessage.textContent = "You win the game! You're smarter than the computer";
-        humanScore = 0;
-        computerScore = 0;
-        updateScore();
     }
     else if (computerScore === 5) {
         displayMessage.textContent = "You lost! Better chance next time!";
-        humanScore = 0;
-        computerScore = 0;
-        updateScore();
     }
+}
+
+function restartGame() {
+    humanScore = 0;
+    computerScore = 0;
+    updateScore();
 }
