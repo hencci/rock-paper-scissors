@@ -16,12 +16,14 @@ playerScore.textContent = humanScore;
 cpuScore.textContent = computerScore;
 
 buttons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-        computerSelection = getComputerChoice();
-        humanSelection = e.target.getAttribute("id");
-        playGame();
-    });
+     button.addEventListener("click", clickEvent);
 });
+
+function clickEvent(e) {
+    computerSelection = getComputerChoice();
+    humanSelection = e.target.getAttribute("id");
+    playGame();
+}
 
 restartButton.addEventListener("click", restartGame);
 
@@ -85,15 +87,23 @@ function playGame() {
     playRound(humanSelection, computerSelection);
     
     if (humanScore === 5) {
-        displayMessage.textContent = "You win the game! You're smarter than the computer";
+        displayMessage.textContent = `You win the game! Final Score is ${humanScore} : ${computerScore}`;
+        endGame();
     }
     else if (computerScore === 5) {
-        displayMessage.textContent = "You lost! Better chance next time!";
+        displayMessage.textContent = `You lost! Final score is ${humanScore} : ${computerScore}`;
+        endGame();
     }
 }
 
 function restartGame() {
+    displayMessage.textContent = "Game restarted!"
     humanScore = 0;
     computerScore = 0;
     updateScore();
+}
+function endGame() {
+    buttons.forEach((button) => {
+        button.removeEventListener("click", clickEvent);
+    });
 }
