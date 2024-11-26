@@ -101,6 +101,9 @@ function restartGame() {
     humanScore = 0;
     computerScore = 0;
     updateScore();
+    buttons.forEach((button) => {
+        button.addEventListener("click", clickEvent);
+   });
 }
 function endGame() {
     buttons.forEach((button) => {
