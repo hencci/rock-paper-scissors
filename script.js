@@ -1,6 +1,3 @@
-// const rock = document.querySelector("#rock");
-// const paper = document.querySelector("#paper");
-// const scissors = document.querySelector("#scissors");
 const buttons = document.querySelectorAll("button");
 const playerScore = document.querySelector(".playerScore");
 const cpuScore = document.querySelector(".cpuScore");
@@ -26,22 +23,6 @@ function clickEvent(e) {
 }
 
 restartButton.addEventListener("click", restartGame);
-
-// rock.addEventListener("click", (e) => {
-//     computerSelection = getComputerChoice();
-//     humanSelection = e.target.getAttribute("id");
-//     playGame();
-// })
-// paper.addEventListener("click", (e) => {
-//     computerSelection = getComputerChoice();
-//     humanSelection = e.target.getAttribute("id");
-//     playGame();
-// })
-// scissors.addEventListener("click", (e) => {
-//     computerSelection = getComputerChoice();
-//     humanSelection = e.target.getAttribute("id");
-//     playGame();
-// })
 
 function getComputerChoice() {
 
