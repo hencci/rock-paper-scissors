@@ -1,6 +1,6 @@
 # Rock, Paper, Scissors game
 
-This is a simple Rock Paper Scissors game. The game is played entirely in the console.
+This is a simple Rock Paper Scissors game, with user interface
 
 ## Table of Contents
 - [Getting Started](#getting-started)
@@ -14,9 +14,9 @@ git clone https://github.com/hencci/rock-paper-scissors
 
 ## How to Play
 
-- Once the app is running, you will see a prompt thats tells the user to type a word from 3 valid options.
-- The game has 5 rounds, so choose your weapon 5 times.
-- Check the console for the results.
+- Once the app is running, you will click one of the 3 buttons
+- The game will run until a winnwer is declred (5 points).
+- Click retstart button to restart the game.
 
 ## Technologies Used
 - **JavaScript (ES6+)**: For game logic
